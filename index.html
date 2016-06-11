@@ -1,0 +1,75 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MinuteTutor</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="782549392010-01d3a78a9o1rvcglfmuoti314j62rjuh.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer onload="customSigninRender();"></script>
+</head>
+<body>
+    <div class="row wrapper">
+        <div class="large-6 columns large-offset-3 centerpanel align-stretch">
+            <div class="row">
+                <div class="large-12 columns">
+                    <h2 class="text-center">minute</h2>
+                    <h1 class="text-center">TUTOR</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="large-8 large-offset-2 columns text-center">
+                    <div id="my-signin2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+
+    <script>
+
+        function customSigninRender() {
+            gapi.signin2.render('my-signin2', {
+                'scope': 'profile email',
+                'width': 480,
+                'height': 50,
+                'longtitle': true,
+                'theme': 'dark',
+                'onsuccess': onSuccess,
+                'onfailure': onFailure
+            });
+        }
+
+        function onSuccess(googleUser) {
+            alert('success');
+        }
+
+        function onFailure(error) {
+            alert(error);
+        }
+
+        function onSignIn(googleUser) {
+            // Useful data for your client-side scripts:
+            var profile = googleUser.getBasicProfile();
+            console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+            console.log('Full Name: ' + profile.getName());
+            console.log('Given Name: ' + profile.getGivenName());
+            console.log('Family Name: ' + profile.getFamilyName());
+            console.log("Image URL: " + profile.getImageUrl());
+            console.log("Email: " + profile.getEmail());
+
+            // The ID token you need to pass to your backend:
+            var id_token = googleUser.getAuthResponse().id_token;
+            console.log("ID Token: " + id_token);
+        };
+    </script>
+    </body>
+</html>

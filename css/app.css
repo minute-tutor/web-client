@@ -1,0 +1,23 @@
+h1, h2 {
+    font-family: "Helvetica Neue";
+    font-weight: 300;
+    margin: 0;
+}
+
+h1 {
+    color: #DEC434;
+    font-weight: 600;
+}
+
+h2 {
+    color: #DECF7D;
+    margin-bottom: -1.7rem;
+}
+
+.centerpanel {
+    background-color: #FFFFEA;
+}
+
+.wrapper {
+    height: 100%;
+}
