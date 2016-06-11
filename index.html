@@ -14,16 +14,41 @@
 </head>
 <body>
     <div class="row wrapper">
-        <div class="large-6 columns large-offset-3 centerpanel align-stretch">
+        <div class="medium-8 columns medium-offset-2 centerpanel align-stretch">
+            <br />
             <div class="row">
-                <div class="large-12 columns">
+                <div class="medium-10 medium-offset-1 columns">
                     <h2 class="text-center">minute</h2>
                     <h1 class="text-center">TUTOR</h1>
+                    <hr />
                 </div>
             </div>
+            <br />
             <div class="row">
-                <div class="large-8 large-offset-2 columns text-center">
-                    <div id="my-signin2"></div>
+                <div class="medium-10 columns medium-offset-1 text-center">
+                    <h4>Sign in or Register Below</h4>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="medium-8 medium-offset-2 columns text-center" id="sibuttoncontainer">
+                    <div id="my-signin2" class="g-signin2 text-center"></div>
+                    <br />
+                    <br />
+                    <a class="button expanded">Sign in with Fakebook</a>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="medium-10 medium-offset-1 columns text-center">
+                    <hr />
+                    <br />
+                    <span class="message">
+                        Connect with a tutor anytime, anywhere to get ahead academically.
+                    </span>
+                    <br />
+                    <br />
+                    <hr />
                 </div>
             </div>
         </div>
@@ -36,10 +61,14 @@
 
     <script>
 
+        $(document).ready(function() {
+            customSigninRender();
+        });
+
         function customSigninRender() {
             gapi.signin2.render('my-signin2', {
                 'scope': 'profile email',
-                'width': 480,
+                'width': $('#sibuttoncontainer').width(),
                 'height': 50,
                 'longtitle': true,
                 'theme': 'dark',
@@ -49,6 +78,9 @@
         }
 
         function onSuccess(googleUser) {
+            //Google gave the OK. Sign in user with Marc's backend
+            var id_token = googleUser.getAuthResponse().id_token;
+            console.log(id_token);
             alert('success');
         }
 

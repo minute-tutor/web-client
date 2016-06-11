@@ -1,7 +1,18 @@
+body {
+    background-image: url("../img/bookBackground.png");
+    background-size: cover;
+}
+
 h1, h2 {
     font-family: "Helvetica Neue";
     font-weight: 300;
     margin: 0;
+}
+
+h4 {
+    font-family: "Helvetica Neue";
+    font-weight: 300;
+    color: #2A2A2A;
 }
 
 h1 {
@@ -20,4 +31,11 @@ h2 {
 
 .wrapper {
     height: 100%;
+}
+
+.message {
+    font-family: "Helvetica Neue";
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: #6A6A6A;
 }
