@@ -1,69 +1,70 @@
 <!doctype html>
 <html class="no-js" lang="en" dir="ltr">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MinuteTutor Home</title>
-    <link rel="stylesheet" href="css/foundation.css">
-    <link rel="stylesheet" href="css/profile.css">
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MinuteTutor Home</title>
+  <link rel="stylesheet" href="css/foundation.css">
+  <link rel="stylesheet" href="css/profile.css">
 
-    <meta name="google-signin-scope" content="profile email">
-    <meta name="google-signin-client_id" content="782549392010-01d3a78a9o1rvcglfmuoti314j62rjuh.apps.googleusercontent.com">
-    <script src="https://apis.google.com/js/platform.js?onload=loadedGapi" async defer></script>
+  <meta name="google-signin-scope" content="profile email">
+  <meta name="google-signin-client_id"
+        content="782549392010-01d3a78a9o1rvcglfmuoti314j62rjuh.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js?onload=loadedGapi" async defer></script>
 </head>
 <body>
 <div class="page">
-    <div class="row vertstretch">
-        <div class="medium-2 columns sidebar">
-            <div class="row">
-                <div class="medium-12 columns text-center">
-                    <h2>minute</h2>
-                    <h1>TUTOR</h1>
-                    <hr />
-                </div>
-            </div>
-            <br />
-            <br />
-            <div class="row">
-                <div class="medium-12 columns">
-                    <div class="row sideelement text-center">
-                        <a class="menulink activelink" href="home.html">HOME</a>
-                    </div>
-                    <div class="row sideelement text-center">
-                        <a class="menulink" href="tutors.html">MY TUTORS</a>
-                    </div>
-                    <div class="row sideelement text-center">
-                        <a class="menulink" href="students.html">MY STUDENTS</a>
-                    </div>
-                    <div class="row sideelement text-center">
-                        <a class="menulink" href="profile.html">PROFILE</a>
-                    </div>
-                </div>
-            </div>
+  <div class="row vertstretch">
+    <div class="medium-2 columns sidebar">
+      <div class="row">
+        <div class="medium-12 columns text-center">
+          <h2>minute</h2>
+          <h1>TUTOR</h1>
+          <hr/>
         </div>
-        <div class="medium-10 columns maincontent vertstretch">
-            <div class="row">
-                <div class="medium-12 columns text-center">
-                    <h1 class="title">Profile: </h1>
-                    <hr id="titlehr" />
-                </div>
-            </div>
-            <br />
-            <br />
-            <div class="row">
-                <div class="medium-4 columns">
-                    <img id="bookpic" src="Designs/img/book.png" />
-                </div>
-                <div class="medium-2 medium-offset-2 columns text-right">
-                    $$$
-                </div>
-                <div class="medium-4 columns text-right">
-                    Stars
-                </div>
-            </div>
+      </div>
+      <br/>
+      <br/>
+      <div class="row">
+        <div class="medium-12 columns">
+          <div class="row sideelement text-center">
+            <a class="menulink activelink" href="home.html">HOME</a>
+          </div>
+          <div class="row sideelement text-center">
+            <a class="menulink" href="tutors.html">MY TUTORS</a>
+          </div>
+          <div class="row sideelement text-center">
+            <a class="menulink" href="students.html">MY STUDENTS</a>
+          </div>
+          <div class="row sideelement text-center">
+            <a class="menulink" href="profile.html">PROFILE</a>
+          </div>
         </div>
+      </div>
     </div>
+    <div class="medium-10 columns maincontent vertstretch">
+      <div class="row">
+        <div class="medium-12 columns text-center">
+          <h1 class="title">Profile: </h1>
+          <hr id="titlehr"/>
+        </div>
+      </div>
+      <br/>
+      <br/>
+      <div class="row">
+        <div class="medium-4 columns">
+          <img id="bookpic" src="Designs/img/book.png"/>
+        </div>
+        <div class="medium-2 medium-offset-2 columns text-right">
+          $$$
+        </div>
+        <div class="medium-4 columns text-right">
+          Stars
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script src="js/vendor/jquery.js"></script>
@@ -73,41 +74,41 @@
 
 <script>
 
-    var auth2;
-    var profile;
+  var auth2;
+  var profile;
 
-    var google_id;
-    var firstname;
-    var lastname;
-    var email;
-    var fullname;
+  var google_id;
+  var firstname;
+  var lastname;
+  var email;
+  var fullname;
 
-    function loadedGapi() {
+  function loadedGapi() {
 
-        var id;
+    var id;
 
-        gapi.load('auth2', function () {
-            auth2 = gapi.auth2.init({
-                client_id: '782549392010-01d3a78a9o1rvcglfmuoti314j62rjuh.apps.googleusercontent.com',
-                fetch_basic_profile: true,
-                scope: 'profile'
-            });
-            auth2.signIn().then(function () {
-                id = auth2.currentUser.get().getId();
-            }).then(function() {
-                if (auth2.isSignedIn.get()) {
-                    var profile = auth2.currentUser.get().getBasicProfile();
-                    var fullname = profile.getName();
-                    $('.title').text($('.title').text() + fullname);
-                    $.post('http://104.197.192.190/getUserByID/' + String(), function(response) {
+    gapi.load('auth2', function () {
+      auth2 = gapi.auth2.init({
+        client_id: '782549392010-01d3a78a9o1rvcglfmuoti314j62rjuh.apps.googleusercontent.com',
+        fetch_basic_profile: true,
+        scope: 'profile'
+      });
+      auth2.signIn().then(function () {
+        id = auth2.currentUser.get().getId();
+      }).then(function () {
+        if (auth2.isSignedIn.get()) {
+          var profile = auth2.currentUser.get().getBasicProfile();
+          var fullname = profile.getName();
+          $('.title').text($('.title').text() + fullname);
+          $.post('http://104.197.192.190/getUserByID/' + String(), function (response) {
 
-                    });
-                }
-            });
-        });
+          });
+        }
+      });
+    });
 
 
-    }
+  }
 </script>
 </body>
 </html>

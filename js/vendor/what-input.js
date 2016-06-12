@@ -1,12 +1,12 @@
-window.whatInput = (function() {
+window.whatInput = (function () {
 
   'use strict';
 
   /*
-    ---------------
-    variables
-    ---------------
-  */
+   ---------------
+   variables
+   ---------------
+   */
 
   // array of actively pressed keys
   var activeKeys = [];
@@ -89,10 +89,10 @@ window.whatInput = (function() {
 
 
   /*
-    ---------------
-    functions
-    ---------------
-  */
+   ---------------
+   functions
+   ---------------
+   */
 
   // allows events that are also triggered to be filtered out for `touchstart`
   function eventBuffer() {
@@ -100,7 +100,7 @@ window.whatInput = (function() {
     setInput(event);
 
     buffer = true;
-    timer = window.setTimeout(function() {
+    timer = window.setTimeout(function () {
       buffer = false;
     }, 650);
   }
@@ -144,9 +144,9 @@ window.whatInput = (function() {
 
         // only if the target is a form input that accepts text
         (
-           eventTargetNode === 'textarea' ||
-           eventTargetNode === 'select' ||
-           (eventTargetNode === 'input' && nonTypingInputs.indexOf(eventTargetType) < 0)
+          eventTargetNode === 'textarea' ||
+          eventTargetNode === 'select' ||
+          (eventTargetNode === 'input' && nonTypingInputs.indexOf(eventTargetType) < 0)
         )) || (
           // ignore modifier keys
           ignoreMap.indexOf(eventKey) > -1
@@ -229,10 +229,10 @@ window.whatInput = (function() {
 
 
   /*
-    ---------------
-    utilities
-    ---------------
-  */
+   ---------------
+   utilities
+   ---------------
+   */
 
   // detect version of mouse wheel event to use
   // via https://developer.mozilla.org/en-US/docs/Web/Events/wheel
@@ -247,13 +247,13 @@ window.whatInput = (function() {
 
 
   /*
-    ---------------
-    init
+   ---------------
+   init
 
-    don't start script unless browser cuts the mustard,
-    also passes if polyfills are used
-    ---------------
-  */
+   don't start script unless browser cuts the mustard,
+   also passes if polyfills are used
+   ---------------
+   */
 
   if (
     'addEventListener' in window &&
@@ -264,7 +264,7 @@ window.whatInput = (function() {
     if (document.body) {
       bindEvents();
 
-    // otherwise wait for the dom to load (script was placed in the <head>)
+      // otherwise wait for the dom to load (script was placed in the <head>)
     } else {
       document.addEventListener('DOMContentLoaded', bindEvents);
     }
@@ -272,21 +272,27 @@ window.whatInput = (function() {
 
 
   /*
-    ---------------
-    api
-    ---------------
-  */
+   ---------------
+   api
+   ---------------
+   */
 
   return {
 
     // returns string: the current input type
-    ask: function() { return currentInput; },
+    ask: function () {
+      return currentInput;
+    },
 
     // returns array: currently pressed keys
-    keys: function() { return activeKeys; },
+    keys: function () {
+      return activeKeys;
+    },
 
     // returns array: all the detected input types
-    types: function() { return inputTypes; },
+    types: function () {
+      return inputTypes;
+    },
 
     // accepts string: manually set the input type
     set: switchInput
