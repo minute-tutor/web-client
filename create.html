@@ -1,0 +1,183 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MinuteTutor Account Creation</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="782549392010-01d3a78a9o1rvcglfmuoti314j62rjuh.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js?onload=loadedGapi" async defer></script>
+</head>
+<body>
+<div class="row wrapper">
+    <div class="medium-8 columns medium-offset-2 centerpanel align-stretch">
+        <br />
+        <div class="row">
+            <div class="medium-10 medium-offset-1 columns">
+                <h2 class="text-center">minute</h2>
+                <h1 class="text-center">TUTOR</h1>
+                <hr />
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="medium-10 columns medium-offset-1 text-center">
+                <h4>Flush out your account details below</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="medium-10 columns medium-offset-1">
+                <form>
+                    <div class="row">
+                        <div class="medium-6 columns">
+                            <label>First: <span class="error">(Please Correct This Entry):</span><input class="" id="firstname" type="text" placeholder="First Name" /></label>
+                        </div>
+                        <div class="medium-6 columns">
+                            <label>Last: <input class="" id="lastname" type="text" placeholder="Last Name" /></label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="medium-12 columns">
+                            <label>E-mail address: <input id="email" type="email" placeholder="you@example.org" /></label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="medium-12 columns">
+                            <label>Paypal e-mail address: <input id="email" type="email" placeholder="you@example.org" /></label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="medium-12 columns">
+                            <h5>Details for Tutoring</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="medium-8 columns">
+                            <label>Skype ID: <input type="text" placeholder="Skype ID" id="skype" /></label>
+                        </div>
+                        <div class="medium-4 columns">
+                            <label>Rate ($/hr): <input type="text" placeholder="$X" id="rate" /></label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="medium-12 columns">
+                            <h5>Areas of Knowledge: </h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="medium-4 columns">
+                            <a class="button toggle expanded hollow">Language Arts</a>
+                        </div>
+                        <div class="medium-4 columns">
+                            <a class="button toggle expanded hollow">Math</a>
+                        </div>
+                        <div class="medium-4 columns">
+                            <a class="button toggle expanded hollow">History</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="medium-4 columns">
+                            <a class="button toggle expanded hollow">Science</a>
+                        </div>
+                        <div class="medium-4 columns">
+                            <a class="button toggle expanded hollow">Language</a>
+                        </div>
+                        <div class="medium-4 columns">
+                            <a class="button toggle expanded hollow">Technology</a>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="medium-6 columns medium-offset-3 text-center">
+                            <a class="button expanded">Create Account</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/what-input.js"></script>
+<script src="js/vendor/foundation.js"></script>
+<script src="js/app.js"></script>
+
+<script>
+
+    //Validation
+    function checkForm() {
+        return true;
+    }
+
+    function submitForm() {
+        if (checkForm()) {
+            skills = [];
+            $('.toggle').each(function() {
+                if (!$(this).hasClass('hollow')) {
+                    skills.append({name: $(this).text()});
+                }
+            });
+            console.log(skills);
+            $.post("104.197.192.190/newuser/", {id: google_id, email: $('#email').val(), name: fullname, skills: skills, rate: $('#rate').val(), skypeID: $('#skype').val()}, function(data) {
+                console.log(data);
+            })
+        } else {
+            //Display errors, tell them to fix it
+        }
+    }
+
+    $('.toggle').click(function() {
+        if ($(this).hasClass('hollow')) {
+            $(this).removeClass('hollow');
+        } else {
+            $(this).addClass('hollow');
+        }
+    });
+
+    var auth2;
+    var profile;
+
+    var google_id;
+    var firstname;
+    var lastname;
+    var email;
+    var fullname;
+
+    function loadedGapi() {
+
+        gapi.load('auth2', function () {
+            auth2 = gapi.auth2.init({
+                client_id: '782549392010-01d3a78a9o1rvcglfmuoti314j62rjuh.apps.googleusercontent.com',
+                fetch_basic_profile: true,
+                scope: 'email'
+            });
+
+            auth2.signIn().then(function () {
+                //console.log(auth2.currentUser.get().getId());
+            }).then(function() {
+                if (auth2.isSignedIn.get()) {
+                    profile = auth2.currentUser.get().getBasicProfile();
+                    google_id = profile.getId();
+                    fullname = profile.getName();
+                    firstname = profile.getGivenName();
+                    lastname = profile.getFamilyName();
+                    email = profile.getEmail();
+                }
+            }).then(function() {
+                //Populate the form
+                $('#firstname').val(firstname);
+                $('#lastname').val(lastname);
+                $('#email').val(email);
+            });
+        });
+
+
+    }
+</script>
+</body>
+</html>
