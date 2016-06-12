@@ -105,40 +105,16 @@
 <script src="js/app.js"></script>
 
 <script>
-
-    var auth2;
-    var profile;
-
-    var google_id;
-    var firstname;
-    var lastname;
-    var email;
-    var fullname;
-
-    function loadedGapi() {
-
-        gapi.load('auth2', function () {
-            auth2 = gapi.auth2.init({
-                client_id: '782549392010-01d3a78a9o1rvcglfmuoti314j62rjuh.apps.googleusercontent.com',
-                fetch_basic_profile: false,
-                scope: 'profile'
-            });
-//            auth2.signIn().then(function () {
-//                //console.log(auth2.currentUser.get().getId());
-//            }).then(function() {
-//                if (auth2.isSignedIn.get()) {
-//                    profile = auth2.currentUser.get().getBasicProfile();
-//                    google_id = profile.getId();
-//                    fullname = profile.getName();
-//                    firstname = profile.getGivenName();
-//                    lastname = profile.getFamilyName();
-//                    email = profile.getEmail();
-//                }
-//            });
-        });
-
-
-    }
+    var config = {
+      apiKey: "AIzaSyAoKiEdeTiiVC5tHnrAKjys89x4d5usO-Q",
+      authDomain: "minute-tutor-ea85e.firebaseapp.com",
+      databaseURL: "https://minute-tutor-ea85e.firebaseio.com",
+      storageBucket: "minute-tutor-ea85e.appspot.com",
+    };
+    firebase.initializeApp(config);
+    // Get a reference to the database service
+    var database = firebase.database(); 
+    var ref = firebase.database().ref('0/myTutors');
 </script>
 </body>
 </html>
