@@ -25,8 +25,8 @@
 					"environmental" : false
 				},
 				"technology" : {
-					"html" : false,
-					"javascript" : false,
+					"WebDevelopment" : false,
+					"Java" : false,
 					"networking" : false,
 					"hardware" : false,
 					"ai" : false
