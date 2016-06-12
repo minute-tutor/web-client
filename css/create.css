@@ -28,7 +28,6 @@ h2 {
 .centerpanel {
     background-color: #FFFFEA;
     overflow: scroll;
-    height: 100%;
 }
 
 .wrapper {

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MinuteTutor Account Creation</title>
     <link rel="stylesheet" href="css/foundation.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/create.css">
 
     <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="782549392010-01d3a78a9o1rvcglfmuoti314j62rjuh.apps.googleusercontent.com">
@@ -93,7 +93,7 @@
                     <br />
                     <div class="row">
                         <div class="medium-6 columns medium-offset-3 text-center">
-                            <a class="button expanded">Create Account</a>
+                            <a class="button expanded" id="submit">Create Account</a>
                         </div>
                     </div>
                 </form>
@@ -109,6 +109,10 @@
 
 <script>
 
+    $('#submit').click(function() {
+        submitForm();
+    });
+
     //Validation
     function checkForm() {
         return true;
@@ -116,15 +120,18 @@
 
     function submitForm() {
         if (checkForm()) {
-            skills = [];
+            var skillsList = [];
             $('.toggle').each(function() {
                 if (!$(this).hasClass('hollow')) {
-                    skills.append({name: $(this).text()});
+                    skillsList.push({name: $(this).text()});
                 }
             });
-            console.log(skills);
-            $.post("104.197.192.190/newuser/", {id: google_id, email: $('#email').val(), name: fullname, skills: skills, rate: $('#rate').val(), skypeID: $('#skype').val()}, function(data) {
-                console.log(data);
+            console.log(skillsList);
+            var jsonData;
+            jsonData = {id: google_id, email: $('#email').val(), name: fullname, skills: JSON.stringify(skillsList) , rate: $('#rate').val(), skypeID: $('#skype').val()};
+            console.log(jsonData);
+            $.post("http://104.197.192.190/newuser/", jsonData, function(data) {
+                console.log("Success");
             })
         } else {
             //Display errors, tell them to fix it
