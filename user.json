@@ -57,6 +57,7 @@
 			},
 			"myTutors": {
 				"Ben" : {
+					"name":"Ben",
 					"rate":"0.16",
 					"rating":"3",
 					"dateTime": "Date: 05/02    Time: 15"
@@ -64,6 +65,7 @@
 			},
 			"myStudents": {
 				"David" : {
+					"name":"David",
 					"date":"05/02",
 					"time":"15"	
 				}
