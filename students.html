@@ -1,0 +1,144 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MinuteTutor Home</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/students.css">
+
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="782549392010-01d3a78a9o1rvcglfmuoti314j62rjuh.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js?onload=loadedGapi" async defer></script>
+</head>
+<body>
+<div class="page">
+    <div class="row vertstretch">
+        <div class="medium-2 columns sidebar">
+            <div class="row">
+                <div class="medium-12 columns text-center">
+                    <h2>minute</h2>
+                    <h1>TUTOR</h1>
+                    <hr />
+                </div>
+            </div>
+            <br />
+            <br />
+            <div class="row">
+                <div class="medium-12 columns">
+                    <div class="row sideelement text-center">
+                        <a class="menulink activelink">HOME</a>
+                    </div>
+                    <div class="row sideelement text-center">
+                        <a class="menulink">MY TUTORS</a>
+                    </div>
+                    <div class="row sideelement text-center">
+                        <a class="menulink">MY STUDENTS</a>
+                    </div>
+                    <div class="row sideelement text-center">
+                        <a class="menulink">PROFILE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="medium-10 columns maincontent vertstretch">
+            <div class="row">
+                <div class="medium12 columns text-center">
+                    <h1 class="title" >My Students</h1>
+                    <hr class="hrB">
+                    <center>
+                    	<br>
+                    	<p class="message">You've taught 8 students. Their information is listed below:</p>
+	                    <table style="width:90%; border:2px solid #999; background-color:red">
+						  <tr class="sideelement" style="background-color:#FFFFEA">
+						    <td>5/18</td>
+						    <td>bhoberman@gmail.com</td> 
+						    <td>36m</td>
+						  </tr>
+						  <tr class="sideelement" style="background-color:#FFFFEA">
+						    <td>5/19</td>
+						    <td>jjabramsfan@gmail.com</td> 
+						    <td>110m</td>
+						  </tr>
+						  <tr class="sideelement" style="background-color:#FFFFEA">
+						    <td>5/21</td>
+						    <td>marcb12000@gmail.com</td> 
+						    <td>12m</td>
+						  </tr>
+						  <tr class="sideelement" style="background-color:#FFFFEA">
+						    <td>5/21</td>
+						    <td>userperson@gmail.com</td> 
+						    <td>74m</td>
+						  </tr>
+						  <tr class="sideelement" style="background-color:#FFFFEA">
+						    <td>5/18</td>
+						    <td>bhoberman@gmail.com</td> 
+						    <td>36m</td>
+						  </tr>
+						  <tr class="sideelement" style="background-color:#FFFFEA">
+						    <td>5/19</td>
+						    <td>jjabramsfan@gmail.com</td> 
+						    <td>110m</td>
+						  </tr>
+						  <tr class="sideelement" style="background-color:#FFFFEA">
+						    <td>5/21</td>
+						    <td>marcb12000@gmail.com</td> 
+						    <td>12m</td>
+						  </tr>
+						  <tr class="sideelement" style="background-color:#FFFFEA">
+						    <td>5/21</td>
+						    <td>userperson@gmail.com</td> 
+						    <td>74m</td>
+						  </tr>
+						</table>
+					</center>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/what-input.js"></script>
+<script src="js/vendor/foundation.js"></script>
+<script src="js/app.js"></script>
+
+<script>
+
+    var auth2;
+    var profile;
+
+    var google_id;
+    var firstname;
+    var lastname;
+    var email;
+    var fullname;
+
+    function loadedGapi() {
+
+        gapi.load('auth2', function () {
+            auth2 = gapi.auth2.init({
+                client_id: '782549392010-01d3a78a9o1rvcglfmuoti314j62rjuh.apps.googleusercontent.com',
+                fetch_basic_profile: false,
+                scope: 'profile'
+            });
+//            auth2.signIn().then(function () {
+//                //console.log(auth2.currentUser.get().getId());
+//            }).then(function() {
+//                if (auth2.isSignedIn.get()) {
+//                    profile = auth2.currentUser.get().getBasicProfile();
+//                    google_id = profile.getId();
+//                    fullname = profile.getName();
+//                    firstname = profile.getGivenName();
+//                    lastname = profile.getFamilyName();
+//                    email = profile.getEmail();
+//                }
+//            });
+        });
+
+
+    }
+</script>
+</body>
+</html>

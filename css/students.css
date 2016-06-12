@@ -60,6 +60,21 @@ hr {
     padding: 0;
 }
 
+.hrB {
+    display: block;
+    height: 3px;
+    border: 0;
+    border-top: 3px solid #999999;
+    margin: 1em 0;
+    margin-top: -0.2rem;
+    padding: 0;
+}
+
+table, tr, th, td{
+    width:90%
+    border: 1px solid #999;
+}
+
 .sideelement {
     font-family: "Helvetica Neue";
     font-weight: 300;
@@ -90,7 +105,7 @@ hr {
 }
 
 .title {
-    color: grey;
+    color: #999;
     font-family: "Helvetica Neue";
     font-weight: 300;
     font-size: 4rem;
