@@ -27,6 +27,7 @@ h2 {
 
 .centerpanel {
     background-color: #FFFFEA;
+    overflow: scroll;
 }
 
 .wrapper {
@@ -38,4 +39,13 @@ h2 {
     font-weight: 300;
     font-size: 1.2rem;
     color: #6A6A6A;
+}
+
+.fakebook {
+
+}
+
+.error {
+    color: red;
+    display: none;
 }
