@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="9f2d791a-67fa-4fef-b770-aaaaf1f88ddf" name="Default" comment="" />
+=======
     <list default="true" id="9f2d791a-67fa-4fef-b770-aaaaf1f88ddf" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.html" afterPath="$PROJECT_DIR$/home.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tutors.html" afterPath="$PROJECT_DIR$/tutors.html" />
     </list>
+>>>>>>> 63003b3ad862d95d7d2ba8d04e5f2c0135f29877
     <ignored path="web-client.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -26,6 +30,8 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
+=======
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -36,6 +42,7 @@
           </provider>
         </entry>
       </file>
+>>>>>>> 63003b3ad862d95d7d2ba8d04e5f2c0135f29877
       <file leaf-file-name="create.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/create.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -49,8 +56,13 @@
       <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="-456">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
             <state relative-caret-position="322">
               <caret line="60" column="59" selection-start-line="60" selection-start-column="59" selection-end-line="60" selection-end-column="59" />
+>>>>>>> 63003b3ad862d95d7d2ba8d04e5f2c0135f29877
               <folding />
             </state>
           </provider>
@@ -59,8 +71,13 @@
       <file leaf-file-name="science.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/science.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="696">
+              <caret line="30" column="12" selection-start-line="29" selection-start-column="20" selection-end-line="40" selection-end-column="26" />
+=======
             <state relative-caret-position="-1303">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> 63003b3ad862d95d7d2ba8d04e5f2c0135f29877
               <folding />
             </state>
           </provider>
@@ -78,33 +95,72 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="students.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/students.html">
+<<<<<<< HEAD
+      <file leaf-file-name="technology.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/technology.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="718">
-              <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
+            <state relative-caret-position="528">
+              <caret line="63" column="14" selection-start-line="63" selection-start-column="14" selection-end-line="63" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jquery.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/vendor/jquery.js">
+      <file leaf-file-name="math.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/math.html">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1368">
+              <caret line="57" column="132" selection-start-line="57" selection-start-column="132" selection-end-line="57" selection-end-column="132" />
+=======
+      <file leaf-file-name="students.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/students.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="718">
+              <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
+>>>>>>> 63003b3ad862d95d7d2ba8d04e5f2c0135f29877
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="language.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/language.html">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="407">
+              <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
+              <folding />
+=======
             <state relative-caret-position="391">
               <caret line="1116" column="37" selection-start-line="1116" selection-start-column="37" selection-end-line="1116" selection-end-column="37" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
+>>>>>>> 63003b3ad862d95d7d2ba8d04e5f2c0135f29877
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/profile.css">
+      <file leaf-file-name="history.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/history.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="1320">
+              <caret line="55" column="138" selection-start-line="55" selection-start-column="138" selection-end-line="55" selection-end-column="138" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="students.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/students.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="373">
+              <caret line="40" column="24" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
+=======
             <state relative-caret-position="2530">
               <caret line="110" column="19" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
+>>>>>>> 63003b3ad862d95d7d2ba8d04e5f2c0135f29877
               <folding />
             </state>
           </provider>
@@ -155,8 +211,15 @@
         <option value="$PROJECT_DIR$/create.html" />
         <option value="$PROJECT_DIR$/students.html" />
         <option value="$PROJECT_DIR$/profile.html" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/technology.html" />
+        <option value="$PROJECT_DIR$/math.html" />
+        <option value="$PROJECT_DIR$/language.html" />
+        <option value="$PROJECT_DIR$/history.html" />
+=======
         <option value="$PROJECT_DIR$/home.html" />
         <option value="$PROJECT_DIR$/tutors.html" />
+>>>>>>> 63003b3ad862d95d7d2ba8d04e5f2c0135f29877
       </list>
     </option>
   </component>
@@ -453,7 +516,12 @@
       <option name="presentableId" value="Default" />
       <updated>1465672437707</updated>
       <workItem from="1465672438893" duration="24953000" />
+<<<<<<< HEAD
+      <workItem from="1465743640962" duration="1629000" />
+      <workItem from="1465747593563" duration="993000" />
+=======
       <workItem from="1465743640962" duration="3986000" />
+>>>>>>> 63003b3ad862d95d7d2ba8d04e5f2c0135f29877
     </task>
     <task id="LOCAL-00001" summary="Fixed links in side bar">
       <created>1465745284601</created>
@@ -466,7 +534,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="27575000" />
+=======
     <option name="totallyTimeSpent" value="28939000" />
+>>>>>>> 63003b3ad862d95d7d2ba8d04e5f2c0135f29877
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
@@ -685,8 +757,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/students.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="696">
+          <caret line="30" column="12" selection-start-line="29" selection-start-column="20" selection-end-line="40" selection-end-column="26" />
+=======
         <state relative-caret-position="718">
           <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
+>>>>>>> 63003b3ad862d95d7d2ba8d04e5f2c0135f29877
           <folding />
         </state>
       </provider>
@@ -699,6 +776,9 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/tutors.html">
+=======
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="943">
@@ -708,6 +788,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/create.html">
+>>>>>>> 63003b3ad862d95d7d2ba8d04e5f2c0135f29877
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="72" column="39" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="39" />
@@ -723,14 +804,59 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/technology.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="63" column="14" selection-start-line="63" selection-start-column="14" selection-end-line="63" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/math.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1368">
+          <caret line="57" column="132" selection-start-line="57" selection-start-column="132" selection-end-line="57" selection-end-column="132" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/language.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes.rtf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-456">
+=======
     <entry file="file://$PROJECT_DIR$/science.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1303">
+>>>>>>> 63003b3ad862d95d7d2ba8d04e5f2c0135f29877
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/students.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="40" column="24" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/history.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="55" column="138" selection-start-line="55" selection-start-column="138" selection-end-line="55" selection-end-column="138" />
+          <folding />
+=======
     <entry file="file://$PROJECT_DIR$/tutors.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
@@ -738,6 +864,7 @@
           <folding>
             <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+>>>>>>> 63003b3ad862d95d7d2ba8d04e5f2c0135f29877
         </state>
       </provider>
     </entry>
