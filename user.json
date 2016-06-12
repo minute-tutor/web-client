@@ -53,9 +53,7 @@
 					"hindi" : false
 				}
 			},
-			"reviews": {
-				"r1" : 0
-			},
+			"reviews" : ["1", "2", "3"],
 			"myTutors": [
 				{
 					"name":"Ben",
