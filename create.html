@@ -140,6 +140,7 @@
         skypeID: $('#skype').val()
       };
       console.log(jsonData);
+      window.location.replace("home.html");
       $.post("http://104.197.192.190/newuser/", jsonData, function (data) {
         console.log("Success");
         //Redirect to home page.

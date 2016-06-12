@@ -84,7 +84,7 @@
     //Google gave the OK. Sign in user with Marc's backend
     var id_token = googleUser.getAuthResponse().id_token;
     console.log(id_token);
-    alert('success');
+      window.location.replace("create.html");
   }
 
   function onFailure(error) {
