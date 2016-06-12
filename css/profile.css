@@ -1,120 +1,120 @@
 body {
-    background-image: url("../img/bookBackground.png");
-    background-size: cover;
+  background-image: url("../img/bookBackground.png");
+  background-size: cover;
 }
 
 h1, h2 {
-    font-family: "Helvetica Neue";
-    font-weight: 300;
-    margin: 0;
+  font-family: "Helvetica Neue";
+  font-weight: 300;
+  margin: 0;
 }
 
 h4 {
-    font-family: "Helvetica Neue";
-    font-weight: 300;
-    color: #2A2A2A;
+  font-family: "Helvetica Neue";
+  font-weight: 300;
+  color: #2A2A2A;
 }
 
 h1 {
-    color: white;
-    font-weight: 600;
-    font-size: 2.5rem;
+  color: white;
+  font-weight: 600;
+  font-size: 2.5rem;
 }
 
 h2 {
-    color: white;
-    margin-bottom: -1.25rem;
-    font-size: 2rem;
+  color: white;
+  margin-bottom: -1.25rem;
+  font-size: 2rem;
 }
 
 .centerpanel {
-    background-color: #FFFFEA;
-    overflow: scroll;
+  background-color: #FFFFEA;
+  overflow: scroll;
 }
 
 .wrapper {
-    height: 100%;
+  height: 100%;
 }
 
 .message {
-    font-family: "Helvetica Neue";
-    font-weight: 300;
-    font-size: 1.2rem;
-    color: #6A6A6A;
+  font-family: "Helvetica Neue";
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: #6A6A6A;
 }
 
 .sidebar {
-    /*margin-left: -8rem;*/
-    height: 100%;
-    background-color: #CDBE62;
-    padding: 1rem;
+  /*margin-left: -8rem;*/
+  height: 100%;
+  background-color: #CDBE62;
+  padding: 1rem;
 }
 
 hr {
-    display: block;
-    height: 3px;
-    border: 0;
-    border-top: 3px solid white;
-    margin: 1em 0;
-    margin-top: -0.2rem;
-    padding: 0;
+  display: block;
+  height: 3px;
+  border: 0;
+  border-top: 3px solid white;
+  margin: 1em 0;
+  margin-top: -0.2rem;
+  padding: 0;
 }
 
 #titlehr {
-    border-top: 3px solid #999;
+  border-top: 3px solid #999;
 }
 
 .sideelement {
-    font-family: "Helvetica Neue";
-    font-weight: 300;
-    margin-bottom: 5rem;
+  font-family: "Helvetica Neue";
+  font-weight: 300;
+  margin-bottom: 5rem;
 }
 
 .menulink {
-    color: grey;
-    font-size: 1.5rem;
+  color: grey;
+  font-size: 1.5rem;
 }
 
 .activelink {
-    color: white;
-    font-weight: 600;
+  color: white;
+  font-weight: 600;
 }
 
 .maincontent {
-    background-color: #F3F4D9;
-    /*margin-left: 3.25rem;*/
+  background-color: #F3F4D9;
+  /*margin-left: 3.25rem;*/
 }
 
 .page {
-    height: 100%;
+  height: 100%;
 }
 
 .vertstretch {
-    height: 100%;
+  height: 100%;
 }
 
 .title {
-    color: #999;
-    font-family: "Helvetica Neue";
-    font-weight: 300;
-    font-size: 4rem;
-    margin-top: 0.5rem;
+  color: #999;
+  font-family: "Helvetica Neue";
+  font-weight: 300;
+  font-size: 4rem;
+  margin-top: 0.5rem;
 }
 
 .topicicon {
-    width: 60%;
-    margin-left: 20%;
+  width: 60%;
+  margin-left: 20%;
 }
 
 .topictext {
-    text-align: center;
-    display: block;
-    font-family: "Helvetica Neue";
-    font-weight: 300;
-    width: 100%;
+  text-align: center;
+  display: block;
+  font-family: "Helvetica Neue";
+  font-weight: 300;
+  width: 100%;
 }
 
 #bookpic {
-    width: 80%;
-    margin-left: 15%;
+  width: 80%;
+  margin-left: 15%;
 }

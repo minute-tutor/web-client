@@ -1,44 +1,44 @@
 body {
-    background-image: url("../img/bookBackground.png");
-    background-size: cover;
+  background-image: url("../img/bookBackground.png");
+  background-size: cover;
 }
 
 h1, h2 {
-    font-family: "Helvetica Neue";
-    font-weight: 300;
-    margin: 0;
+  font-family: "Helvetica Neue";
+  font-weight: 300;
+  margin: 0;
 }
 
 h4 {
-    font-family: "Helvetica Neue";
-    font-weight: 300;
-    color: #2A2A2A;
+  font-family: "Helvetica Neue";
+  font-weight: 300;
+  color: #2A2A2A;
 }
 
 h1 {
-    color: #DEC434;
-    font-weight: 600;
+  color: #DEC434;
+  font-weight: 600;
 }
 
 h2 {
-    color: #DECF7D;
-    margin-bottom: -1.7rem;
+  color: #DECF7D;
+  margin-bottom: -1.7rem;
 }
 
 .centerpanel {
-    background-color: #FFFFEA;
-    overflow: scroll;
+  background-color: #FFFFEA;
+  overflow: scroll;
 }
 
 .wrapper {
-    height: 100%;
+  height: 100%;
 }
 
 .message {
-    font-family: "Helvetica Neue";
-    font-weight: 300;
-    font-size: 1.2rem;
-    color: #6A6A6A;
+  font-family: "Helvetica Neue";
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: #6A6A6A;
 }
 
 .fakebook {
@@ -46,6 +46,6 @@ h2 {
 }
 
 .error {
-    color: red;
-    display: none;
+  color: red;
+  display: none;
 }
