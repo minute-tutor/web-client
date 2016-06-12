@@ -60,8 +60,19 @@ hr {
     padding: 0;
 }
 
-#titlehr {
-    border-top: 3px solid #999;
+.hrB {
+    display: block;
+    height: 3px;
+    border: 0;
+    border-top: 3px solid #999999;
+    margin: 1em 0;
+    margin-top: -0.2rem;
+    padding: 0;
+}
+
+table, tr, th, td{
+    width:90%
+    border: 1px solid #999;
 }
 
 .sideelement {
@@ -99,20 +110,4 @@ hr {
     font-weight: 300;
     font-size: 4rem;
     margin-top: 0.5rem;
-<<<<<<< HEAD
-}
-
-.topicicon {
-    width: 60%;
-    margin-left: 20%;
-}
-
-.topictext {
-    text-align: center;
-    display: block;
-    font-family: "Helvetica Neue";
-    font-weight: 300;
-    width: 100%;
-=======
->>>>>>> 1e425ac69b975a952fd779c915444d0ef06094cf
 }
