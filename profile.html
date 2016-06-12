@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="css/profile.css">
 
     <meta name="google-signin-scope" content="profile email">
-    <meta name="google-signin-client_id" content="782549392010-01d3a78a9o1rvcglfmuoti314j62rjuh.apps.googleusercontent.com">
+    <meta name="google-signin-client_id"
+          content="782549392010-01d3a78a9o1rvcglfmuoti314j62rjuh.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js?onload=loadedGapi" async defer></script>
 </head>
 <body>
@@ -20,15 +21,14 @@
                 <div class="medium-12 columns text-center">
                     <h2>minute</h2>
                     <h1>TUTOR</h1>
-                    <hr />
+                    <hr/>
+
                 </div>
             </div>
-            <br />
-            <br />
             <div class="row">
                 <div class="medium-12 columns">
                     <div class="row sideelement text-center">
-                        <a class="menulink activelink" href="home.html">HOME</a>
+                        <a class="menulink" href="home.html">HOME</a>
                     </div>
                     <div class="row sideelement text-center">
                         <a class="menulink" href="tutors.html">MY TUTORS</a>
@@ -37,23 +37,25 @@
                         <a class="menulink" href="students.html">MY STUDENTS</a>
                     </div>
                     <div class="row sideelement text-center">
-                        <a class="menulink" href="profile.html">PROFILE</a>
+                        <a class="menulink activelink" href="profile.html">PROFILE</a>
                     </div>
+
                 </div>
             </div>
         </div>
+
         <div class="medium-10 columns maincontent vertstretch">
             <div class="row">
                 <div class="medium-12 columns text-center">
                     <h1 class="title">Profile: John Doe</h1>
-                    <hr id="titlehr" />
+                    <hr id="titlehr"/>
                 </div>
             </div>
-            <br />
-            <br />
+            <br/>
+            <br/>
             <div class="row">
                 <div class="medium-4 columns">
-                    <img id="bookpic" src="Designs/img/face.png" />
+                    <img id="bookpic" src="Designs/img/face.png"/>
                 </div>
                 <div class="medium-8 columns text-right">
                     <div class="row">
@@ -61,29 +63,32 @@
                             John Doe charges $14.50 per hour.
                         </div>
                         <div class="medium-8 columns text-left">
-                            <img class="star" src="Designs/img/full_star.png" />
-                            <img class="star" src="Designs/img/full_star.png" />
-                            <img class="star" src="Designs/img/full_star.png" />
-                            <img class="star" src="Designs/img/full_star.png" />
-                            <img class="star" src="Designs/img/outline_star.png" />
+                            <img class="star" src="Designs/img/full_star.png"/>
+                            <img class="star" src="Designs/img/full_star.png"/>
+                            <img class="star" src="Designs/img/full_star.png"/>
+                            <img class="star" src="Designs/img/full_star.png"/>
+                            <img class="star" src="Designs/img/outline_star.png"/>
                         </div>
                     </div>
-                    <br />
+                    <br/>
                     <div class="row">
                         <div class="medium-11 columns message text-justify">
-                            John Doe is the first ever tutor to register with minuteTUTOR. He has expertise in writing and history, and has a solid understanding of chemistry and biology as well. He is extremely well-reviewed and is known for being a friendly, helpful tutor who can explain complex events concisely.
+                            John Doe is the first ever tutor to register with minuteTUTOR. He has expertise in
+                            writing and history, and has a solid understanding of chemistry and biology as well. He
+                            is extremely well-reviewed and is known for being a friendly, helpful tutor who can
+                            explain complex events concisely.
                         </div>
                     </div>
                 </div>
             </div>
-            <br />
-            <br />
+            <br/>
+            <br/>
             <div class="row">
                 <div class="medium-12 columns message">
                     <h4>John's areas of expertise:</h4>
                 </div>
             </div>
-            <br />
+            <br/>
             <div class="row">
                 <div class="medium-12 columns">
                     <div class="row">
@@ -112,6 +117,11 @@
             </div>
         </div>
     </div>
+    <br/>
+    <br/>
+
+</div>
+</div>
 </div>
 
 <script src="js/vendor/jquery.js"></script>
@@ -128,42 +138,6 @@
             $(this).addClass('hollow');
         }
     });
-
-    var auth2;
-    var profile;
-
-    var google_id;
-    var firstname;
-    var lastname;
-    var email;
-    var fullname;
-
-//    function loadedGapi() {
-//
-//        var id;
-//
-//        gapi.load('auth2', function () {
-//            auth2 = gapi.auth2.init({
-//                client_id: '782549392010-01d3a78a9o1rvcglfmuoti314j62rjuh.apps.googleusercontent.com',
-//                fetch_basic_profile: true,
-//                scope: 'profile'
-//            });
-//            auth2.signIn().then(function () {
-//                id = auth2.currentUser.get().getId();
-//            }).then(function() {
-//                if (auth2.isSignedIn.get()) {
-//                    var profile = auth2.currentUser.get().getBasicProfile();
-//                    var fullname = profile.getName();
-//                    $('.title').text($('.title').text() + fullname);
-//                    $.post('http://104.197.192.190/getUserByID/' + String(), function(response) {
-//
-//                    });
-//                }
-//            });
-//        });
-//
-//
-//    }
 </script>
 </body>
 </html>
