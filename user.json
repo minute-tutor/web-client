@@ -1,11 +1,11 @@
 [
 	{
-		{
+		
 			"id": "String",
 			"email": "String",
-			"name": "String"
-		},
-		{
+			"name": "String",
+		
+		
 			"description": "String",
 			"money": 0,
 			"skills": {
@@ -58,7 +58,7 @@
 			"rate": 0,
 			"skypeID": "String",
 			"lastLoggedIn": "Number"
-		}
+		
 	
 	}
 ]
