@@ -1,0 +1,62 @@
+[
+	{
+		"id": "String",
+		"email": "String",
+		"name": "String"
+	},
+	{
+		"description": "String",
+		"money": 0,
+		"skills": {
+			"math" : {
+				"algebra" : false,
+				"geometry" : false,
+				"trigonometry" : false,
+				"calculus" : false,
+				"statistics" : false
+			},
+			"science" : {
+				"chemistry" : false,
+				"astronomy" : false,
+				"biology" : false,
+				"physics" : false,
+				"environmental" : false
+			},
+			"technology" : {
+				"html" : false,
+				"javascript" : false,
+				"networking" : false,
+				"hardware" : false,
+				"ai" : false
+			},
+			"english" : {
+				"spelling" : false,
+				"literature" : false,
+				"rhetoric" : false,
+				"grammar" : false,
+				"vocabulary" : false
+			},
+			"history" : {
+				"world" : false,
+				"us" : false,
+				"european" : false,
+				"contemporary" : false,
+				"economics" : false
+			},
+			"language" : {
+				"french" : false,
+				"spanish" : false,
+				"mandarin" : false,
+				"japanese" : false,
+				"hindi" : false
+			}
+		},
+		"reviews": {
+			"r1" : 0
+		},
+		"rate": 0,
+		"skypeID": "String",
+		"lastLoggedIn": "Number"
+	}
+	
+]
