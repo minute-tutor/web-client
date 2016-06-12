@@ -132,6 +132,8 @@
             console.log(jsonData);
             $.post("http://104.197.192.190/newuser/", jsonData, function(data) {
                 console.log("Success");
+                //Redirect to home page.
+                window.location.replace("home.html");
             })
         } else {
             //Display errors, tell them to fix it

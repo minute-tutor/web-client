@@ -60,6 +60,10 @@ hr {
     padding: 0;
 }
 
+#titlehr {
+    border-top: 3px solid #999;
+}
+
 .sideelement {
     font-family: "Helvetica Neue";
     font-weight: 300;
@@ -90,9 +94,22 @@ hr {
 }
 
 .title {
-    color: grey;
+    color: #999;
     font-family: "Helvetica Neue";
     font-weight: 300;
     font-size: 4rem;
-    text-decoration: underline;
+    margin-top: 0.5rem;
+}
+
+.topicicon {
+    width: 60%;
+    margin-left: 20%;
+}
+
+.topictext {
+    text-align: center;
+    display: block;
+    font-family: "Helvetica Neue";
+    font-weight: 300;
+    width: 100%;
 }
