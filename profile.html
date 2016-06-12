@@ -45,7 +45,7 @@
         <div class="medium-10 columns maincontent vertstretch">
             <div class="row">
                 <div class="medium-12 columns text-center">
-                    <h1 class="title">Profile: </h1>
+                    <h1 class="title">Profile: John Doe</h1>
                     <hr id="titlehr" />
                 </div>
             </div>
@@ -53,13 +53,61 @@
             <br />
             <div class="row">
                 <div class="medium-4 columns">
-                    <img id="bookpic" src="Designs/img/book.png" />
+                    <img id="bookpic" src="Designs/img/face.png" />
                 </div>
-                <div class="medium-2 medium-offset-2 columns text-right">
-                    $$$
+                <div class="medium-8 columns text-right">
+                    <div class="row">
+                        <div class="medium-4 columns message text-left">
+                            John Doe charges $14.50 per hour.
+                        </div>
+                        <div class="medium-8 columns text-left">
+                            <img class="star" src="Designs/img/full_star.png" />
+                            <img class="star" src="Designs/img/full_star.png" />
+                            <img class="star" src="Designs/img/full_star.png" />
+                            <img class="star" src="Designs/img/full_star.png" />
+                            <img class="star" src="Designs/img/outline_star.png" />
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="medium-11 columns message text-justify">
+                            John Doe is the first ever tutor to register with minuteTUTOR. He has expertise in writing and history, and has a solid understanding of chemistry and biology as well. He is extremely well-reviewed and is known for being a friendly, helpful tutor who can explain complex events concisely.
+                        </div>
+                    </div>
                 </div>
-                <div class="medium-4 columns text-right">
-                    Stars
+            </div>
+            <br />
+            <br />
+            <div class="row">
+                <div class="medium-12 columns message">
+                    <h4>John's areas of expertise:</h4>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="medium-12 columns">
+                    <div class="row">
+                        <div class="medium-4 columns">
+                            <a class="button toggle expanded">Language Arts</a>
+                        </div>
+                        <div class="medium-4 columns">
+                            <a class="button toggle expanded hollow">Math</a>
+                        </div>
+                        <div class="medium-4 columns">
+                            <a class="button toggle expanded">History</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="medium-4 columns">
+                            <a class="button toggle expanded hollow">Technology</a>
+                        </div>
+                        <div class="medium-4 columns">
+                            <a class="button toggle expanded">Science</a>
+                        </div>
+                        <div class="medium-4 columns">
+                            <a class="button toggle expanded hollow">Foreign Language</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -73,6 +121,14 @@
 
 <script>
 
+    $('.toggle').click(function () {
+        if ($(this).hasClass('hollow')) {
+            $(this).removeClass('hollow');
+        } else {
+            $(this).addClass('hollow');
+        }
+    });
+
     var auth2;
     var profile;
 
@@ -82,32 +138,32 @@
     var email;
     var fullname;
 
-    function loadedGapi() {
-
-        var id;
-
-        gapi.load('auth2', function () {
-            auth2 = gapi.auth2.init({
-                client_id: '782549392010-01d3a78a9o1rvcglfmuoti314j62rjuh.apps.googleusercontent.com',
-                fetch_basic_profile: true,
-                scope: 'profile'
-            });
-            auth2.signIn().then(function () {
-                id = auth2.currentUser.get().getId();
-            }).then(function() {
-                if (auth2.isSignedIn.get()) {
-                    var profile = auth2.currentUser.get().getBasicProfile();
-                    var fullname = profile.getName();
-                    $('.title').text($('.title').text() + fullname);
-                    $.post('http://104.197.192.190/getUserByID/' + String(), function(response) {
-
-                    });
-                }
-            });
-        });
-
-
-    }
+//    function loadedGapi() {
+//
+//        var id;
+//
+//        gapi.load('auth2', function () {
+//            auth2 = gapi.auth2.init({
+//                client_id: '782549392010-01d3a78a9o1rvcglfmuoti314j62rjuh.apps.googleusercontent.com',
+//                fetch_basic_profile: true,
+//                scope: 'profile'
+//            });
+//            auth2.signIn().then(function () {
+//                id = auth2.currentUser.get().getId();
+//            }).then(function() {
+//                if (auth2.isSignedIn.get()) {
+//                    var profile = auth2.currentUser.get().getBasicProfile();
+//                    var fullname = profile.getName();
+//                    $('.title').text($('.title').text() + fullname);
+//                    $.post('http://104.197.192.190/getUserByID/' + String(), function(response) {
+//
+//                    });
+//                }
+//            });
+//        });
+//
+//
+//    }
 </script>
 </body>
 </html>

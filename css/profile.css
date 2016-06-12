@@ -118,3 +118,8 @@ hr {
   width: 80%;
   margin-left: 15%;
 }
+
+.star {
+  display: inline-block;
+  width: 4rem;
+}
