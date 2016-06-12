@@ -4,6 +4,7 @@
 			"id": "String",
 			"email": "String",
 			"name": "String",
+			"isOnline":"true",
 		
 		
 			"description": "String",
@@ -55,21 +56,21 @@
 			"reviews": {
 				"r1" : 0
 			},
-			"myTutors": {
-				"Ben" : {
+			"myTutors": [
+				{
 					"name":"Ben",
 					"rate":"0.16",
 					"rating":"3",
 					"dateTime": "Date: 05/02    Time: 15"
 				}
-			},
-			"myStudents": {
-				"David" : {
+			],
+			"myStudents": [
+				{
 					"name":"David",
 					"date":"05/02",
 					"time":"15"	
 				}
-			},
+			],
 			"rate": 0,
 			"skypeID": "String",
 			"lastLoggedIn": "Number"
