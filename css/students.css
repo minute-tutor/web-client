@@ -73,12 +73,14 @@ hr {
 table, tr, th, td {
   width: 90%
   border: 1px solid #999;
+  padding:0.2rem;
+  padding-left:0.6rem;
 }
 
 .sideelement {
   font-family: "Helvetica Neue";
   font-weight: 300;
-  margin-bottom: 5rem;
+  margin: 10rem;
 }
 
 .menulink {

@@ -50,48 +50,11 @@
           <hr class="hrB">
           <center>
             <br>
-            <p class="message">You've taught 8 students. Their information is listed below:</p>
-            <table style="width:90%; border:2px solid #999; background-color:red">
-              <tr class="sideelement" style="background-color:#FFFFEA">
-                <td>5/18</td>
-                <td>bhoberman@gmail.com</td>
-                <td>36m</td>
-              </tr>
-              <tr class="sideelement" style="background-color:#FFFFEA">
-                <td>5/19</td>
-                <td>jjabramsfan@gmail.com</td>
-                <td>110m</td>
-              </tr>
-              <tr class="sideelement" style="background-color:#FFFFEA">
-                <td>5/21</td>
-                <td>marcb12000@gmail.com</td>
-                <td>12m</td>
-              </tr>
-              <tr class="sideelement" style="background-color:#FFFFEA">
-                <td>5/21</td>
-                <td>userperson@gmail.com</td>
-                <td>74m</td>
-              </tr>
-              <tr class="sideelement" style="background-color:#FFFFEA">
-                <td>5/18</td>
-                <td>bhoberman@gmail.com</td>
-                <td>36m</td>
-              </tr>
-              <tr class="sideelement" style="background-color:#FFFFEA">
-                <td>5/19</td>
-                <td>jjabramsfan@gmail.com</td>
-                <td>110m</td>
-              </tr>
-              <tr class="sideelement" style="background-color:#FFFFEA">
-                <td>5/21</td>
-                <td>marcb12000@gmail.com</td>
-                <td>12m</td>
-              </tr>
-              <tr class="sideelement" style="background-color:#FFFFEA">
-                <td>5/21</td>
-                <td>userperson@gmail.com</td>
-                <td>74m</td>
-              </tr>
+            <p class="message" style="display:inline-block">You've taught</p> 
+			<p class="message" id="count" style="display:inline-block"> </p> 
+			<p class="message" style="display:inline-block">student(s). Their information is listed below:</p>
+            <table id="studentList" style="width:90%; border:2px solid #999; background-color:red">
+              
             </table>
           </center>
         </div>
@@ -104,6 +67,7 @@
 <script src="js/vendor/what-input.js"></script>
 <script src="js/vendor/foundation.js"></script>
 <script src="js/app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
 
 <script>
   var config = {
@@ -115,7 +79,62 @@
   firebase.initializeApp(config);
   // Get a reference to the database service
   var database = firebase.database();
-  var ref = firebase.database().ref('0/myTutors');
+  var ref = firebase.database().ref('0/myStudents');
+  
+  ref.on('value',function(dataSnapshot){
+	var count = dataSnapshot.numChildren();
+	document.getElementById("count").appendChild(document.createTextNode(count));
+	for(var i = 0; i<count; i++){
+		var studentDate = "";
+		var studentName = "";
+		var studentTime = "";
+		ref = firebase.database().ref('0/myStudents/'+i+'/date');
+		ref.on('value',function(dataSnapshot2){
+			studentDate = dataSnapshot2.val();
+		});
+		ref = firebase.database().ref('0/myStudents/'+i+'/name');
+		ref.on('value',function(dataSnapshot2){
+			studentName = dataSnapshot2.val();
+		});
+		ref = firebase.database().ref('0/myStudents/'+i+'/time');
+		ref.on('value',function(dataSnapshot2){
+			studentTime = dataSnapshot2.val();
+		});
+		createStudent( studentDate, studentName, studentTime );
+	}
+  });
+    
+  ref = firebase.database().ref('0/myTutors');
+  ref.on('child_changed', function(dataSnapshot){
+	location.reload();
+  });
+  
+  function createStudent( date, name, time ){
+	var tableRow = addElement("null","tr",["class","style"],["sideelement","background-color:#FFFFEA"]);
+	var td1 = addElement(tableRow,"td",[],[]);
+	writeElement(td1,date);
+	var td2 = addElement(tableRow,"td",[],[]);
+	writeElement(td2,name);
+	var td3 = addElement(tableRow,"td",[],[]);
+	writeElement(td3,time+"m");
+  }
+  
+  function addElement( parent, elementName, attArray, valArray ){
+	var el = document.createElement(elementName);
+	for(var i =0; i<attArray.length; i++){
+		el.setAttribute(attArray[i],valArray[i]);
+	}
+	if(parent=="null"){
+		document.getElementById("studentList").appendChild(el);
+	} else {
+		parent.appendChild(el);
+	}
+	return el;
+  }
+  function writeElement( parent, text ) {
+	var txt = document.createTextNode(text);
+	parent.appendChild(txt);
+  }
 </script>
 </body>
 </html>
