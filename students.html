@@ -104,7 +104,7 @@
 	}
   });
     
-  ref = firebase.database().ref('0/myTutors');
+  ref = firebase.database().ref('0/myStudents');
   ref.on('child_changed', function(dataSnapshot){
 	location.reload();
   });
