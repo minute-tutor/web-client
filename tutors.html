@@ -104,6 +104,11 @@
 		createTutor(tutorName, tutorRate, tutorRating);
 	}
   });
+  
+  ref = firebase.database().ref('0/myTutors');
+  ref.on('child_changed', function(dataSnapshot){
+	location.reload();
+  });
   //createTutor( "Marc Bacvanski", "0.21", "2" );
   //createTutor( "Marc Bacvanski", "0.21", "2" );
   //createTutor( "Marc Bacvanski", "0.21", "2" );
